@@ -47,6 +47,13 @@ git clone
 
 # Run
 ```
+cd <checkout-location>
+docker compose up
+
+```
+The docker compose initialized mysql DB and creates few tables and then run the openweathermain.py
+
+```
 docker exec -it <mysql-container-id> /bin/bash
 ```
 ```

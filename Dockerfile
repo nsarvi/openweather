@@ -11,10 +11,10 @@ LABEL Maintainer="nsarvi"
 WORKDIR /usr/app/src
 
 #to COPY the remote file at working directory in container
-COPY openweathertest.py ./
+COPY openweathermain.py ./
 COPY GPSLocation.py ./
 
 #CMD instruction should be used to run the software
 #contained by your image, along with any arguments.
 
-CMD [ "python", "./openweathertest.py"]
+CMD [ "python", "./openweathermain.py"]
