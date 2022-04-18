@@ -27,6 +27,7 @@ target/
 .settings/
 .classpath
 .project
+api.env
 
 # OS
 .DS_Store

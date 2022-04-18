@@ -50,8 +50,14 @@ git clone https://github.com/nsarvi/openweather.git
 # Run
 ```
 cd openweather
+```
+create a file name called api.env and enter the APIKEY environment variable as below
+
+APIKEY=<your-api-key>
+```
 docker compose up
 
+```
 ```
 The docker compose initializes mysql DB, creates few tables and then run the openweathermain.py once mysql is healthy.
 

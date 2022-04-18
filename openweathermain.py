@@ -5,9 +5,10 @@ from mysql.connector import Error
 import GPSLocation
 from datetime import timedelta
 import time
+import os
 
 import json
-api_key = "2d9eae6a78d0bd8f447f5df63f8a752a"
+api_key = os.environ['APIKEY']
 
 # 10 locations
 dfw = GPSLocation.GPS("DFW", "37.757815", "-96.9080557")
