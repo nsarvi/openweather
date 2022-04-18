@@ -12,6 +12,8 @@ The current implementation has many drawbacks such as
 2. Scalable
 3. Fault tolerant 
 4. 12 factors complaint for microservices architecture style. 
+5. DB specific indexes/hints for parser
+6. DB table partition based on lat/lng 
 
 In case, Openweather OR MySQL is down, is Python resilient to faults in the upstream and/or downstream  ? No.
 What if there is a need to ingest weather data in real time from all the cities around the world ? Is this scalable ? No.
@@ -51,7 +53,9 @@ cd openweather
 docker compose up
 
 ```
-The docker compose initialized mysql DB and creates few tables and then run the openweathermain.py
+The docker compose initializes mysql DB, creates few tables and then run the openweathermain.py once mysql is healthy.
+
+openweathermain.py simply calls API and extracts fields from the JSON response and inserts into MySQL in batches. 
 
 ```
 docker exec -it <mysql-container-id> /bin/bash
