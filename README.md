@@ -43,11 +43,11 @@ systems like Snowflake, Greenplum, Redshift etc.
 
 # Check out 
 Check out the repo
-git clone
+git clone https://github.com/nsarvi/openweather.git
 
 # Run
 ```
-cd <checkout-location>
+cd openweather
 docker compose up
 
 ```
